@@ -113,4 +113,15 @@ public class Utils {
 
         return "";
     }
+
+    /**
+     * 요청 헤덩 : Authorization : Bearer ...
+     * @return
+     */
+    public String getAuthToken(){
+        String auth = request.getHeader("Authorization");
+
+        return StringUtils.hasText(auth) ? auth.substring(7).trim() : null;
+
+    }
 }
