@@ -7,9 +7,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.koreait.global.libs.Utils;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.filter.GenericFilterBean;
 
@@ -37,12 +35,11 @@ public class LoginFilter extends GenericFilterBean {
      *
      * @param token
      */
-    
-    private void loginProcess(String token){
-        try{
+    private void loginProcess(String token) {
+        try {
             String apiUrl = utils.serviceUrl("member-service", "/info");
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
